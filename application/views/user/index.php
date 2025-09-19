@@ -75,7 +75,7 @@
         <!-- Form Tambah Transaksi -->
         <div class="card p-4 mb-4">
             <h5>Tambah Transaksi</h5>
-            <form action="<?= site_url('tambah') ?>" method="post">
+            <form action="<?= site_url('keuangan/tambah') ?>" method="post">
                 <div class="mb-2">
                     <select class="form-select" name="type" required>
                         <option value="masuk">Uang Masuk</option>
@@ -124,7 +124,7 @@
                                 <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editTransactionModal" onclick='editTransactionModal(<?= json_encode($t) ?>)'>
                                     Edit
                                 </button>
-                                <a href="<?= site_url('hapus/' . $t->id) ?>" class="btn btn-sm btn-danger" onclick="return confirm('Hapus transaksi ini?')">Hapus</a>
+                                <a href="<?= site_url('keuangan/hapus/' . $t->id) ?>" class="btn btn-sm btn-danger" onclick="return confirm('Hapus transaksi ini?')">Hapus</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>
@@ -135,7 +135,7 @@
     <!-- Edit Transaksi -->
     <div class="modal fade" id="editTransactionModal">
         <div class="modal-dialog">
-            <form action="<?= site_url('update') ?>" method="post">
+            <form action="<?= site_url('keuangan/update') ?>" method="post">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title">Edit Transaksi</h5>
