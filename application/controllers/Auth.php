@@ -15,7 +15,7 @@ class Auth extends CI_Controller
     public function index()
     {
 
-        if ($this->input->post()) {
+        if ($this->input->post("email")) {
             $email = $this->input->post('email');
             $password = $this->input->post('password');
 
